@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Fill this form</h1>
+
+    <form action="{% url 's_information' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <label for="fname">First Name:-</label>
+            <input type="text" name="fname" placeholder="Enter your First name" required>
+        <br>
+
+        <label for="lname">Last Name:-</label>
+            <input type="text" name="lname" placeholder="Enter your Last name" required>
+        <br>
+
+        <label for="age">Age:-</label>
+            <input type="number" min="16" max="70" name="age" placeholder="Age" required>
+        <br>
+
+        <label for="gender">Gender:-</label>
+            <select name="gender">
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+                <option value="3">Prefer not to say</option>
+            <select>
+        <br>
+
+        <input type="submit">
+    </form>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

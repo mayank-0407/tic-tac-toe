@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <!-- <link rel="stylesheet" href="{% static 'style.css' %}"> -->
+    <style>
+        body {
+                background-color: rgb(94, 255, 0);
+        }
+        .main{
+                background-color: blanchedalmond;
+                width: 320px;
+                height: 440px;
+                top: 50%;
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%,-50%);
+                box-sizing: border-box;
+                padding: 30px 30px;
+                border-radius: 1cm;
+        }
+        h1{
+            margin:0;
+            padding:15 15px;
+            text-align: center;
+            font-size: 22px;
+        }
+        .main label{
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+        .main input{
+            width: 90%;
+            margin-bottom: 30px;
+        }
+        .boxes{
+            border: none;
+            background: transparent;
+            outline: none;
+            border-bottom: 2px solid #000;
+            height: 40px;
+        }
+        .main input[type="submit"]
+        {
+            border: none;
+            outline: none;
+            height: 40px;
+            background: rgb(78, 27, 173);
+            color: #fff;
+            font-size: 18px;
+            border-radius: 20cm;
+        }
+        .main input[type="submit"]:hover{
+            cursor: pointer;
+            background: rgb(197, 43, 184);
+            color: rgb(12, 12, 12);
+        }
+        .main a{
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 20px;
+        }
+        .main a:hover
+        {
+            color: rgb(197, 43, 184);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+        {% if request.user.is_authenticated %}
+            <h1>Hello {{request.user.username}},You were logged in Successfully-_-</h1>
+            <a href="{% url 'signout' %}">Logout</a>
+        {% endif %}
+        <div class="main">
+        <h1>Welcome user Enter information bellow for Login</h1>
+        <form action="./" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <br>
+        <label for="email">Email:-</label>
+        <br>
+            <input type="text" name="email" placeholder="Enter valid Email" class="boxes" required>
+        <br>
+        <label for="password1">Password:-</label>
+        <br>
+            <input type="password" name="password1" placeholder="Enter Password" class="boxes"  required>
+        <br>
+        <input type="submit">
+        <a href="{% url 'signup' %}">Signup</a>
+        </form>
+    </div>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

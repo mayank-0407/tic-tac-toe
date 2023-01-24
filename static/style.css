@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+/* body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0d6efd;
+}
+.log {
+    width: 360px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 12px;
+    background: #ffffff;
+}
+.log h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+.login form {
+    font-size: 20px;
+} */
+nav{
+    background-color: rgb(31, 31, 78);
+    color: white;
+    font-weight: bold;   
+    height: 75px;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    padding: 0 500px;
+}
+body{
+    background-color: rgb(98, 98, 211);
+    color: white;
+}
+nav ul{
+    list-style-type: none;
+}
+.gamecontainer{
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+}
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    border: 2px solid rgb(175, 32, 32);
+    background-color: rgb(59, 108, 182);
+    cursor: pointer;
+}
+.gameinfo{
+    padding: 0 64px;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.gameinfo{
+    padding: 0 64px;
+    justify-content: center;
+}
+.gameinfo h2{
+    font-size: 4vw;
+    font-weight: bold;
+}
+.info{
+    padding: 0 64px;
+    margin-top: 32px;
+    font-size: medium;
+    position: absolute;
+    left: 50%;
+    
+}
+#reset{
+    margin: 0 23px;
+    padding: 6px 14px;
+    background: rgb(197, 151, 90);
+    border-radius: 6px;
+    cursor: pointer;
+    /* align-self: right; */
+    display: flex;
+    margin-left: 24px;
+    position: absolute;
+    left: 59%;
+    top: 50%;
+}
+.sign{
+    position: absolute;
+    left: 80%;
+    top: 4%;
+    padding: 0 12px;
+    border: none;
+    outline: none;
+    height: 30px;
+    background: transparent;
+    color: rgb(229, 203, 203);
+    font-size: 18px;
+    border-radius: 20cm;    
+    font-weight: bold;
+}
+.sign1{
+    position: absolute;
+    left: 70%;
+    top: 4%;
+    padding: 0 12px;
+    border: none;
+    outline: none;
+    height: 30px;
+    background: transparent;
+    color: rgb(10, 10, 10);
+    font-size: 18px;
+    border-radius: 20cm;    
+    font-weight: bold;
+}
